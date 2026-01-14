@@ -20,14 +20,14 @@
                                 — {{ $product->price }} €
                                 — {{ $product->is_public ? 'Public' : 'Privé' }}
                                 <br />
-                                @can('view-product', $product)
+                                @can('view', $product)
                                 <a href="{{ route('products.show', $product) }}" class="ml-2 text-blue-600 underline">
                                     Voir
                                 </a>
                                 <br />
                                 @endcan
 
-                                @can('manage-product', $product)
+                                @can('update', $product)
                                 {{-- Modifier --}}
                                 <a href="{{ route('products.edit', $product) }}" class="ml-2 text-green-600 underline">
                                     Modifier
