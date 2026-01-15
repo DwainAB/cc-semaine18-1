@@ -39,5 +39,8 @@ class DatabaseSeeder extends Seeder
         Product::factory()->count(3)->create([
             'user_id' => $user->id,
         ]);
+
+        // Rôles et permissions
+        $this->call(RoleAndPermissionSeeder::class);
     }
 }
